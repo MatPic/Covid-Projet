@@ -4,49 +4,120 @@
 @import './modules/menu';
 
 body {
-    background-color: $theme-grey-light;
+  background-color: $theme-grey-light;
+  font-family: "Montserrat";
 }
 
 #home {
-    height: 100vh;
-    background: url(../img/Coronavirus.jpg);
-    background-size: cover;
-    color: white;
+  height: 100vh;
+  background: url(../img/Coronavirus.jpg) center center;
+  background-size: cover;
+  color: white;
+
+  #home-content-wrapper {
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #home-text-wrapper {
+
+      #first-text {
+        color: white;
+        overflow: hidden;
+        font-size: 5vw;
+        margin-bottom: 20px;
+        @include lg() {
+          font-size: 5vw;
+          margin-bottom: 50px;
+        }
+        @for $i from 1 through 2 {
+          .words:nth-child(#{$i}) {
+            display: inline-block;
+            animation: first-text-entrance .5s $transition-easing ((($i - 1) * .05s) + .4s) both;
+          }
+        }
+        @keyframes first-text-entrance {
+          from {
+            transform: translate3d(0, 100%, 0);
+          }
+        }
+      }
+      #home-word {
+        font-family: "arboria", sans-serif;
+        font-weight: 600;
+        font-size: 17vw;
+        @include xl() {
+          font-size: 20vw;
+        }
+        display: flex;
+        align-items: baseline;
+        color: white;
+        .letter-path {
+          fill: $theme-main;
+        }
+        .letter {
+          line-height: .5em;
+          margin: 0 2px;
+        }
+        @mixin animation-home-translate($name, $translate) {
+          @keyframes #{$name} {
+            from {
+              opacity: 0;
+              transform: translate3d($translate, 0, 0);
+            }
+          }
+        }
+        @for $i from 1 through 11 {
+          @include animation-home-translate(letter-#{$i}, $i * 30px);
+          .letter:nth-child(#{$i}) {
+            animation: letter-#{$i} 1s $transition-easing .6s both;
+          }
+        }
+      }
+    }
+  }
 }
 
 #arrow-scroll {
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
-    width: 80px;
-    cursor: pointer;
-    transform: translate(-50%, 0);
-    transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
-    outline: 0;
-    &:hover {
-      transform: translate(-50%, -20%);
-    }
-
-    .arrow-scroll-line {
-      fill: none;
-      stroke: white;
-      stroke-width: 15;
-      stroke-miterlimit: 10;
-      stroke-dasharray: 1000;
-      transform-origin: center center;
-      stroke-dashoffset: 500;
-      stroke-linecap: round;
-      animation: tracer 2s cubic-bezier(.83, .01, .19, 1.01) backwards .3s;
-      transition: all 0.8s cubic-bezier(.42, 0, .11, .98) 0.5s;
-    }
-    &.hidden .arrow-scroll-line {
-      stroke-dashoffset: -400;
-      transform: rotate(-100deg);
-    }
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  width: 80px;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+  transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
+  outline: 0;
+  &:hover {
+    transform: translate(-50%, -20%);
   }
 
+  .arrow-scroll-line {
+    fill: none;
+    stroke: white;
+    stroke-width: 20;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 1000;
+    transform-origin: center center;
+    stroke-dashoffset: 500;
+    stroke-linecap: round;
+    animation: tracer 2s cubic-bezier(.83, .01, .19, 1.01) backwards .3s;
+    transition: all 0.8s cubic-bezier(.42, 0, .11, .98) 0.5s;
+  }
+  &.hidden .arrow-scroll-line {
+    stroke-dashoffset: -400;
+    transform: rotate(-100deg);
+  }
+  @keyframes tracer {
+    from {
+      transform: translate(0, 100%) rotate(100deg);
+      stroke-dashoffset: 1000;
+    }
+  }
+}
+
 footer {
-    background-color: $theme-grey-dark;
-    opacity: 80%;
-    color: white;
+  background-color: $theme-grey-dark;
+  opacity: 80%;
+  color: white;
 }
