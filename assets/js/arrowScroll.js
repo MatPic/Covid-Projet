@@ -4,7 +4,7 @@ export default function arrowScroll () {
   const arrow = $('#arrow-scroll')
   arrow.click( function (e) {
     e.preventDefault()
-    $('footer').get(0).scrollIntoView({ behavior: 'smooth' })
+    $('#home-content').get(0).scrollIntoView({ behavior: 'smooth' })
   })
   $(window).scroll(() => {
     if ($(window).scrollTop() > 0) {
