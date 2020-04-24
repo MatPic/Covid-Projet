@@ -36,7 +36,7 @@
   color: white;
   &:hover {
       background-color: $theme-main;
-      color: white;
+      color: white !important;
   }
   &.scrolled {
     color: $theme-grey-dark;

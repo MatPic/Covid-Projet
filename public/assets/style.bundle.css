@@ -9,7 +9,7 @@
   color: white; }
   .btn:hover {
     background-color: #c33f42;
-    color: white; }
+    color: white !important; }
   .btn.scrolled {
     color: #323739; }
     .btn.scrolled:hover {
@@ -34,7 +34,8 @@
     height: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    cursor: pointer; }
     #main-nav #menu_logo img {
       position: absolute;
       width: 100%;
@@ -289,5 +290,73 @@ body {
     stroke-dashoffset: 1000; } }
 
 #home-content {
-  margin-bottom: 378.4px; }
+  margin-bottom: 297px;
+  text-align: center;
+  padding: 20px 8%;
+  background-color: #f5f7fc; }
+  #home-content h1 {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #home-content p {
+    font-size: 110%; }
+    #home-content p b {
+      color: #c33f42; }
+  #home-content .redline-left {
+    height: 7px;
+    width: 80vw;
+    transform-origin: left;
+    background-color: #c33f42;
+    border-radius: 0 10px 10px 0;
+    margin-left: -10vw;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  #home-content .redline-right {
+    height: 7px;
+    width: 82vw;
+    transform-origin: right;
+    background-color: #c33f42;
+    border-radius: 10px 0 0 10px;
+    margin-left: 9vw;
+    margin-top: 50px;
+    margin-bottom: 50px; }
+  #home-content .news-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+  #home-content .news-component {
+    min-height: 250px;
+    padding: 25px 0;
+    width: 550px;
+    max-width: 100%;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #home-content .news-component img {
+      width: 150px; }
+    #home-content .news-component .news-title {
+      font-size: 20px;
+      margin: 20px 30px 20px 30px;
+      color: #c33f42; }
+    #home-content .news-component .news-desc {
+      font-size: 15px;
+      margin: 0 30px 20px 30px;
+      text-align: justify; }
+      #home-content .news-component .news-desc b {
+        color: black !important; }
+  #home-content :nth-child(3) img {
+    margin-top: 30px;
+    margin-bottom: 30px; }
+  #home-content :nth-child(5) .news-title {
+    margin-top: 0 !important; }
+  #home-content :nth-child(6) img {
+    margin-top: 30px; }
+  #home-content .answer-icon {
+    width: 50px !important;
+    margin-bottom: 20px;
+    margin-top: 20px; }
 

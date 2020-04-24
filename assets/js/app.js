@@ -17,6 +17,26 @@ $(document).ready(function () {
         }
     })
 
+    $('#menu_logo').click(function (e) {
+        e.preventDefault()
+        $('#page-content').get(0).scrollIntoView({ behavior: 'smooth' })
+    })
+
+    $('#main-nav ul li:first-child').click(function (e) {
+        e.preventDefault()
+        $('#page-content').get(0).scrollIntoView({ behavior: 'smooth' })
+    })
+
+    $('#main-nav ul li:nth-child(2)').click(function (e) {
+        e.preventDefault()
+        $('#home-content p').get(0).scrollIntoView({ behavior: 'smooth' })
+    })
+
+    $('#main-nav ul li a').click(function (e) {
+        e.preventDefault()
+        $('.redline-right').get(0).scrollIntoView({ behavior: 'smooth' })
+    })
+
     // if (pageWidth < 808) {
     //     $('#main-nav').addClass('responsive')
     //     $('#main-nav ul').addClass('responsive')
