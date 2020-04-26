@@ -12,11 +12,11 @@
 </head>
 <body>
     <nav id="main-nav">
-        <div id="menu_logo"><img src="../assets/img/Covid-19_logo.png" alt=""></div>
+        <div id="menu_logo" data-scrollto="#page-content"><img src="../assets/img/Covid-19_logo.png" alt=""></div>
         <ul>
-            <li>Accueil</li>
-            <li>Les news</li>
-            <li id="btn_header">
+            <li data-scrollto="#page-content">Accueil</li>
+            <li data-scrollto=".redline-left">Les news</li>
+            <li id="btn_header" data-scrollto=".redline-right">
                 <a class="btn">Comment reconnaître une vraie information ?</a>
             </li>
         </ul>
@@ -42,7 +42,7 @@
                     </div>
                 </div>
             </div>
-            <div id="arrow-scroll" class="link-1">
+            <div id="arrow-scroll" class="link-1" data-scrollto="#home-content">
                 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      viewBox="0 0 300 300" style="enable-background:new 0 0 300 300;" xml:space="preserve">
                 <polyline class="arrow-scroll-line" points="21,105.5 151.4,194.5 279,105.5" />
@@ -51,8 +51,8 @@
         </div>
     </div>
     <div id="home-content">
+        <h1>Saurez-vous démêler le vrai du faux ?</h1>
         <div class="row">
-            <h1>Saurez-vous démêler le vrai du faux ?</h1>
             <p>Rumeurs / vérités avérées, conseils de gourou / preuves scientifiques, bons réflexes / mauvais gestes, info / infox, etc.
                 En ces temps de confinement et d'épidémie, <b>s'informer</b> est important. Mais attention aux fausses informations
                 (ou "fake news"). Alors, comment s'informer ? Et surtout, comment vérifier la <b>véracité</b> d'une information ? <br/>
@@ -60,13 +60,13 @@
                 permettre de vous entraîner sur de quelques articles et sources différents. En bref, <b>démêler le vrai du faux</b>.
             </p>
         </div>
-        <div class="redline-left"></div>
+        <div class="redline-left scroll-appear"></div>
         <h1>Quelques News</h1>
         <div class="row">
             <div class="col-12">
                 <div class="news-list">
-                    <div class="news-component">
-                        <img src="../assets/img/logo_gouv.svg" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_gouv.svg" alt="">
                         <p class="news-title"><b>Informations : Coronavirus</b></p>
                         <p class="news-desc">En application de l’état d’urgence sanitaire, jusqu’au 11 mai, les déplacements sont 
                             interdits sauf dans les cas suivants et uniquement à condition d'être munis d'une attestation pour : <br>
@@ -74,11 +74,13 @@
                             indispensables à l’exercice d’activités ne pouvant être organisées sous forme de télétravail ou déplacements 
                             professionnels ne pouvant être différés. <br>
                             - Déplacements pour effectuer des achats de fournitures ...</p>
-                        <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        </div>
                     </div>
-                    <div class="news-component">
-                        <img src="../assets/img/logo_gorafi.png" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_gorafi.png" alt="">
                         <p class="news-title"><b>Tout ce qu’il faut savoir sur le Covid-19</b></p>
                         <p class="news-desc"><b>Depuis des semaines, vous entendez des affirmations totalement invérifiables sur le 
                             Coronavirus et ne savez plus quoi en penser ? Rassurez-vous, Le Gorafi a consulté ses meilleurs experts 
@@ -86,22 +88,26 @@
                             <b>- D’où vient le virus ?</b> <br>
                             Le virus a été fabriqué dans sa cave par Jamy, ancien animateur de la fameuse émission C’est pas sorcier, 
                             selon le très sérieux ...</p>
-                        <a href="http://www.legorafi.fr/2020/04/20/tout-ce-quil-faut-savoir-sur-le-covid-19/" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="http://www.legorafi.fr/2020/04/20/tout-ce-quil-faut-savoir-sur-le-covid-19/" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        </div>
                     </div>
-                    <div class="news-component">
-                        <img src="../assets/img/logo_numerama.webp" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_numerama.webp" alt="">
                         <p class="news-title"><b>Coronavirus : Facebook bloque des articles de presse sérieux par erreur</b></p>
                         <p class="news-desc"><b>Facebook a bloqué de nombreux articles rédigés par des entreprises de presse sérieuses. 
                             Le réseau social a admis qu'il s'agissait d'un bug. Les conséquences sont toutefois importantes.</b> <br>
                             « Cette publication ne respecte pas nos Standards de la communauté en matière de contenus indésirables. » 
                             Ce message de Facebook, de nombreuses entreprises de presse l’ont reçu, dans la nuit de mardi à mercredi 
                             18 mars ...</p>
-                        <a href="https://www.numerama.com/tech/612187-coronavirus-facebook-bloque-des-articles-de-presse-serieux-par-erreur.html" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="https://www.numerama.com/tech/612187-coronavirus-facebook-bloque-des-articles-de-presse-serieux-par-erreur.html" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        </div>
                     </div>
-                    <div class="news-component">
-                        <img src="../assets/img/logo_spf.png" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_spf.png" alt="">
                         <p class="news-title"><b>Infection au nouveau Coronavirus (SARS-CoV-2), COVID-19, France et Monde</b></p>
                         <p class="news-desc">Depuis l’émergence de cette nouvelle maladie, COVID-19, en janvier 2020, tous les 
                             agents de Santé publique France sont mobilisés et la <b>complémentarité de leur métier s’exprime pleinement 
@@ -109,11 +115,13 @@
                             Leur action consiste à surveiller et comprendre la dynamique de cette épidémie, anticiper les différents 
                             scénarii et mettre en place des actions pour prévenir et limiter la transmission de ce virus sur le territoire
                             national. La réserve sanitaire est fortement mobilisée depuis ...</p>
-                        <a href="https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-et-infections-respiratoires/infection-a-coronavirus/articles/infection-au-nouveau-coronavirus-sars-cov-2-covid-19-france-et-monde" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        </div>
                     </div>
-                    <div class="news-component">
-                        <img src="../assets/img/logo_capeb.png" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_capeb.png" alt="">
                         <p class="news-title"><b>Alerte Covid-19</b></p>
                         <p class="news-desc">Retrouvez ici toutes les informations relatives au virus et à sa gestion dans les 
                             entreprises ainsi que les consignes et autres recommandations faites par le Gouvernement. <br>
@@ -121,11 +129,13 @@
                             - Guide de préconisations de sécurité sanitaire (version 2) : téléchargez le guide ici et téléchargez les 
                             fiches annexes au guide ici. <br>
                             - Reprise ou non des chantiers : les conseils de la CAPEB à ...</p>
-                        <a href="https://www.capeb.fr/service/alerte-covid-19" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="https://www.capeb.fr/service/alerte-covid-19" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/check.png" class="answer-icon" alt="">
+                        </div>
                     </div>
-                    <div class="news-component">
-                        <img src="../assets/img/logo_capital.png" alt="">
+                    <div class="news-component scroll-appear">
+                        <img class="website-img" src="../assets/img/logo_capital.png" alt="">
                         <p class="news-title"><b>Coronavirus : faut-il s’inquiéter des colis Amazon et AliExpress ?</b></p>
                         <p class="news-desc"><b>Le virus peut survivre plusieurs heures sur un objet, mais les temps de transports 
                             suppriment les risques de contamination.</b> <br>
@@ -133,26 +143,75 @@
                             été détectés en Amérique du nord et en Europe <b>(voir notre carte en direct)</b>, certains internautes s’inquiètent 
                             sur les réseaux sociaux des différents modes de transmission du virus. Parmi les interrogations qui reviennent
                             le plus souvent : la possibilité ...</p>
-                        <a href="https://www.capital.fr/economie-politique/coronavirus-faut-il-sinquieter-des-colis-amazon-et-aliexpress-1360694" target="_blank" class="btn">Voir l'article</a>
-                        <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        <div>
+                            <a href="https://www.capital.fr/economie-politique/coronavirus-faut-il-sinquieter-des-colis-amazon-et-aliexpress-1360694" target="_blank" class="btn">Voir l'article</a>
+                            <img src="../assets/img/close.png" class="answer-icon" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="btn" style="margin-top: 50px;">Voir les réponses</div>
-        <div class="redline-right"></div>
+        <div id="answer" class="btn" style="margin-top: 50px;">Voir les réponses</div>
+        <div class="redline-right scroll-appear"></div>
         <h1>Comment reconnaître une vraie information ?</h1>
+        <div id="info-div" class="row">
+            <div class="col-12 info-component scroll-appear">
+                <img src="../assets/img/author.svg" alt="">
+                <div>
+                    <div class="info-title">Vérifier et identifier l'auteur de l'article</div>
+                    <div class="info-desc">Qui a écrit et a publié ? Est-ce une personnalité publique, connue, ou une entreprise
+                        ou organisation reconnue ? Ou bien quelqu'un que ni vous ni personne ne connaît ? En tout cas, vérifier
+                        l'auteur d'un article ou post est important et peut révéler une "fake news".
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 info-component-reverse scroll-appear">
+                <img src="../assets/img/regroup.svg" alt="">
+                <div>
+                    <div class="info-title">Regrouper les mêmes informations</div>
+                    <div class="info-desc">Si une information que vous avez trouvé est unique, il y a plus de chance qu'elle soit fausse.
+                        En revanche, trouver plusieurs fois la même information (qui plus est sur des sites officiels) signifie
+                        en général qu'elle est avérée.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 info-component scroll-appear">
+                <img src="../assets/img/title.svg" alt="">
+                <div>
+                    <div class="info-title">Se méfier des titres aguicheurs ...</div>
+                    <div class="info-desc">On est naturellement attirés vers des news surprenantes ou insolites. C'est pour cela qu'il
+                        faut se méfier des titres qui nous donnent envie. Ce genre de titre est justement fait pour que nous tombions
+                        dans le panneau.
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 info-component-reverse scroll-appear">
+                <img src="../assets/img/legals.svg" alt="">
+                <div>
+                    <div class="info-title">D'où provient le site ?</div>
+                    <div class="info-desc">Même si une information peut s'avérer vraie, certains sites peuvent la récupérer pour la
+                        déformer. C'est pour cela qu'il est aussi important de se renseigner sur le site en question, notamment en
+                        vérifiant la présence de "Mentions Légales" généralement en bas de celui-ci. Elles sont obligatoires et attestent
+                        l'authenticité d'un site web.
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <footer id="main-footer">
         <div id="footer_logo">
             <img src="../assets/img/Covid-19_logo.png" alt="">
         </div>
         <div id="footer_text">
-            <p>Si vous voulez plus de (vrais) renseignements, voici les liens vers quelques sites utiles : <br>
-                Insérer lien <br>
-                Insérer lien <br>
-                Insérer lien <br>
-                <br>
+            <p>Ce site est à but pédagogique et a été réalisé <br> dans le cadre d'un devoir étudiant. <br>
+                Voici les liens vers quelques sites utiles : <br>
+                <a href="">Mentions Légales</a>
+            </p>
+            <p>
+                <a href="https://www.gouvernement.fr/info-coronavirus">Gouvernement français</a>
+                <a href="https://www.santepubliquefrance.fr/">Santé publique France</a>
+                <a href="https://solidarites-sante.gouv.fr/soins-et-maladies/maladies/maladies-infectieuses/coronavirus/tout-savoir-sur-le-covid-19/article/reponses-a-vos-questions-sur-le-covid-19-par-des-medecins">Ministère des Solidarités et de la Santé</a>
+                <a href="https://www.who.int/fr">OMS</a>
             </p>
         </div>
     </footer>
