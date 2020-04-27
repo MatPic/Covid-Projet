@@ -5,13 +5,14 @@ $(document).ready(function () {
 
     const pageWidth = $(window).width()
     const body = $("html, body");
+    let menuOpen = false
 
     $(window).scroll(() => {
         if ($(window).scrollTop() > 0) {
             $('#main-nav').addClass('scrolled')
             $('li').addClass('scrolled')
             $('.btn').addClass('scrolled')
-        } else {
+        } else if (!menuOpen) {
             $('#main-nav').removeClass('scrolled')
             $('li').removeClass('scrolled')
             $('.btn').removeClass('scrolled')
@@ -65,6 +66,7 @@ $(document).ready(function () {
             $('#menu_button').toggleClass('open')
             $('#main-nav').toggleClass('open')
         }
+        menuOpen = !menuOpen
     })
     
     arrowScroll()
