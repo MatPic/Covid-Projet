@@ -13,7 +13,10 @@
     height: 100px;
     overflow: hidden;
     &.open {
-        height: 250px !important;
+        height: 300px !important;
+        @include sm () {
+            height: 250px !important;
+        }
     }
     #menu_logo {
         margin-left: 20px;
@@ -75,14 +78,14 @@
     top: 15px;
     align-items: center;
     list-style-type: none;
-    width: 100%;
+    width: auto;
     transition: all 0.5s cubic-bezier(.42, 0, .11, .98);
     margin: 0;
     padding-inline-start: 0;
     padding: 0;
     left: 120px;
     li {
-        white-space: nowrap;
+        white-space: inherit;
         display: block;
         padding: 8px 15px;
         cursor: pointer;
@@ -106,6 +109,9 @@
             display: inline-block;
             height: auto;
         }
+    }
+    @include sm () {
+        width: 100%;
     }
     @include lg () {
         display: flex;

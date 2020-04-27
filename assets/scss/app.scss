@@ -2,6 +2,12 @@
 @import './globals/colors';
 @import './modules/button';
 @import './modules/menu';
+@import './modules/hamburger';
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
 
 body {
   background-color: $theme-grey-light;
@@ -154,7 +160,7 @@ body {
     background-color: $theme-main;
     border-radius: 10px 0 0 10px;
     margin-right: -10vw;
-    margin-left: auto;
+    margin-left: 11.7vw;
     margin-top: 50px;
     margin-bottom: 50px;
     transition: width .7s ease-in-out;
@@ -199,16 +205,24 @@ body {
       width: 150px;
     }
     .news-title {
-      font-size: 20px;
+      font-size: 15px;
       margin: 20px 30px 20px 30px;
       color: $theme-main;
     }
     .news-desc {
-      font-size: 15px;
+      font-size: 10px;
       margin: 0 30px 20px 30px;
       text-align: justify;
       b {
         color: black !important;
+      }
+    }
+    @include sm () {
+      .news-title {
+        font-size: 20px;
+      }
+      .news-desc {
+        font-size: 15px;
       }
     }
   }

@@ -27,7 +27,10 @@
   height: 100px;
   overflow: hidden; }
   #main-nav.open {
-    height: 250px !important; }
+    height: 300px !important; }
+    @media (min-width: 576px) {
+      #main-nav.open {
+        height: 250px !important; } }
   #main-nav #menu_logo {
     margin-left: 20px;
     margin-top: 20px;
@@ -81,14 +84,14 @@
   top: 15px;
   align-items: center;
   list-style-type: none;
-  width: 100%;
+  width: auto;
   transition: all 0.5s cubic-bezier(0.42, 0, 0.11, 0.98);
   margin: 0;
   padding-inline-start: 0;
   padding: 0;
   left: 120px; }
   #main-nav ul li {
-    white-space: nowrap;
+    white-space: inherit;
     display: block;
     padding: 8px 15px;
     cursor: pointer;
@@ -109,6 +112,9 @@
       #main-nav ul li {
         display: inline-block;
         height: auto; } }
+  @media (min-width: 576px) {
+    #main-nav ul {
+      width: 100%; } }
   @media (min-width: 992px) {
     #main-nav ul {
       display: flex;
@@ -165,6 +171,34 @@ a, a:hover {
         #main-footer #footer_text p a:hover {
           color: #4144c0;
           transition: all .2s ease-in-out; }
+
+#menu_button .menu_bar {
+  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right; }
+
+#menu_button :first-child {
+  transform-origin: 0; }
+
+#menu_button :nth-child(2) {
+  right: 0;
+  width: 60px; }
+
+#menu_button :last-child {
+  margin-bottom: 0;
+  transform-origin: 100%; }
+
+#menu_button.open :first-child {
+  transform: rotateZ(25.5deg); }
+
+#menu_button.open :nth-child(2) {
+  transform: rotateZ(-25.5deg);
+  width: 105% !important; }
+
+#menu_button.open :last-child {
+  transform: rotateZ(25.5deg); }
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat-Medium.c8b6e08.ttf); }
 
 body {
   background-color: #f5f7fc;
@@ -356,7 +390,7 @@ body {
     background-color: #c33f42;
     border-radius: 10px 0 0 10px;
     margin-right: -10vw;
-    margin-left: auto;
+    margin-left: 11.7vw;
     margin-top: 50px;
     margin-bottom: 50px;
     transition: width .7s ease-in-out; }
@@ -393,15 +427,20 @@ body {
     #home-content .news-component img {
       width: 150px; }
     #home-content .news-component .news-title {
-      font-size: 20px;
+      font-size: 15px;
       margin: 20px 30px 20px 30px;
       color: #c33f42; }
     #home-content .news-component .news-desc {
-      font-size: 15px;
+      font-size: 10px;
       margin: 0 30px 20px 30px;
       text-align: justify; }
       #home-content .news-component .news-desc b {
         color: black !important; }
+    @media (min-width: 576px) {
+      #home-content .news-component .news-title {
+        font-size: 20px; }
+      #home-content .news-component .news-desc {
+        font-size: 15px; } }
   #home-content :nth-child(3) .website-img {
     margin-top: 30px;
     margin-bottom: 30px; }

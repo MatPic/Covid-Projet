@@ -1,0 +1,28 @@
+#menu_button {
+    .menu_bar {
+        transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width, 0.3s ease right;
+    }
+    :first-child {
+        transform-origin: 0;
+    }
+    :nth-child(2) {
+        right: 0;
+        width: 60px;
+    }
+    :last-child {
+        margin-bottom: 0;
+        transform-origin: 100%;
+    }
+    &.open {
+        :first-child {
+            transform: rotateZ(25.5deg);
+        }
+        :nth-child(2) {
+            transform: rotateZ(-25.5deg);
+            width: 105% !important;
+        }
+        :last-child {
+            transform: rotateZ(25.5deg);
+        }
+    }
+}
