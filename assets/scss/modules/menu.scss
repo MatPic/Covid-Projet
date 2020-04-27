@@ -163,7 +163,7 @@ a, a:hover {
         flex-grow: 4;
         flex-wrap: wrap;
         display: flex;
-        font-size: 1.2em;
+        font-size: 1em;
         line-height: 1.6em;
         align-items: center;
         p {
@@ -176,6 +176,9 @@ a, a:hover {
                     transition: all .2s ease-in-out;
                 }
             }
+        }
+        @include sm () {
+            font-size: 1.2em;
         }
     }
 }
